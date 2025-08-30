@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, Clock } from 'lucide-react';
 import shineImg from '../img/sp1256789e3e35c30f.avif';
 import activaImg from '../img/activa-6g-right-front-three-quarter-3.avif';
-import pulsar150Img from '../img/pulsar150.jpg';
+import pulsar150Img from '../img/pulsar150.avif';
 
 
 const HomePage = () => {

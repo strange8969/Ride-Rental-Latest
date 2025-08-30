@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import VehicleGrid from '../components/VehicleGrid';
 import BookingModal from '../components/BookingModal';
-import pulsar150Img from '../img/pulsar150.jpg';
+import pulsar150Img from '../img/pulsar150.avif';
 import pulsar125Img from '../img/pulsar-125-left-front-three-quarter.avif';
 import apacheImg from '../img/apache-160-right-side-view.avif';
-import royalEnfieldImg from '../img/royal350.jpg';
+import royalEnfieldImg from '../img/royal350.avif';
 
 
 const SportsBikePage = () => {
