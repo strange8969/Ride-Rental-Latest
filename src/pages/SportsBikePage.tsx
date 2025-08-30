@@ -5,6 +5,7 @@ import pulsar150Img from '../img/pulsar150.avif';
 import pulsar125Img from '../img/pulsar-125-left-front-three-quarter.avif';
 import apacheImg from '../img/apache-160-right-side-view.avif';
 import royalEnfieldImg from '../img/royal350.avif';
+import tvsRaiderImg from '../img/tvs-raider.avif';
 
 
 const SportsBikePage = () => {
@@ -57,6 +58,18 @@ const SportsBikePage = () => {
         engine: '160cc',
         power: '24.5 HP',
         mileage: '38 kmpl',
+        type: 'Sports'
+      }
+    },
+    {
+      id: 5,
+      name: 'TVS Raider',
+      image: tvsRaiderImg,
+      price: '₹550/day',
+      specs: {
+        engine: '125cc',
+        power: '20 HP',
+        mileage: '55 kmpl',
         type: 'Sports'
       }
     },
