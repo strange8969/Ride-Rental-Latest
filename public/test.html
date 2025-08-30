@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic HTML Test Page</h1>
+    <p>This is a simple HTML file to test if the server is working properly.</p>
+    
+    <div class="container">
+        <h2>Server Status</h2>
+        <p>If you can see this page, the server is responding to basic HTML requests.</p>
+    </div>
+    
+    <div class="container">
+        <h2>Interactive Test</h2>
+        <p>Click the button below to test basic JavaScript functionality:</p>
+        <button id="testButton">Click Me!</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        document.getElementById('testButton').addEventListener('click', function() {
+            document.getElementById('result').innerText = 'JavaScript is working correctly! ' + new Date().toLocaleTimeString();
+        });
+    </script>
+</body>
+</html>

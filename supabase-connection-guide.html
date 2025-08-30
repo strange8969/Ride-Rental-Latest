@@ -1,0 +1,170 @@
+<!-- Style -->
+<style>
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+  }
+  .container {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 30px;
+  }
+  h1 {
+    color: #4a4a4a;
+    margin-top: 0;
+    border-bottom: 2px solid #6366f1;
+    padding-bottom: 10px;
+  }
+  .step {
+    margin-bottom: 30px;
+  }
+  .step-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #6366f1;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  code {
+    background: #e5e7eb;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+  }
+  .code-block {
+    background: #1e1e1e;
+    color: #e6e6e6;
+    padding: 15px;
+    border-radius: 8px;
+    overflow: auto;
+    font-family: 'Courier New', monospace;
+    margin: 15px 0;
+  }
+  .warning {
+    background: #ffedd5;
+    border-left: 4px solid #f97316;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+  }
+  .success {
+    background: #dcfce7;
+    border-left: 4px solid #22c55e;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .button {
+    display: inline-block;
+    background: #6366f1;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .button:hover {
+    background: #4f46e5;
+  }
+</style>
+
+<!-- Content -->
+<div class="container">
+  <h1>Fixing Your Supabase Connection</h1>
+  
+  <div class="warning">
+    <strong>Error Detected:</strong> Failed to fetch - Your app can't connect to Supabase.
+  </div>
+  
+  <div class="step">
+    <h2><span class="step-number">1</span> Get Your Supabase Credentials</h2>
+    <p>You need to get your actual Supabase project URL and anonymous key from your Supabase dashboard.</p>
+    <ol>
+      <li>Go to <a href="https://app.supabase.com" target="_blank">app.supabase.com</a> and sign in</li>
+      <li>Select your project (or create one if you haven't yet)</li>
+      <li>Click on <strong>Project Settings</strong> in the left sidebar</li>
+      <li>Go to the <strong>API</strong> tab</li>
+      <li>You'll find:
+        <ul>
+          <li><strong>Project URL</strong>: This is your <code>VITE_SUPABASE_URL</code></li>
+          <li><strong>API Keys > anon/public</strong>: This is your <code>VITE_SUPABASE_ANON_KEY</code></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+  
+  <div class="step">
+    <h2><span class="step-number">2</span> Update Your Environment Variables</h2>
+    <p>You need to replace the placeholder values in your <code>.env</code> file with your actual credentials:</p>
+    
+    <div class="code-block">
+      # The URL to your Supabase project (replace with your actual URL)<br>
+      VITE_SUPABASE_URL=https://your-actual-project-id.supabase.co<br><br>
+      # The anon/public key (replace with your actual key)<br>
+      VITE_SUPABASE_ANON_KEY=your-actual-anon-key
+    </div>
+    
+    <p>To edit your <code>.env</code> file:</p>
+    <ol>
+      <li>Open File Explorer and navigate to <code>C:\Users\prati\Downloads\ride rental\project</code></li>
+      <li>Right-click on the <code>.env</code> file and open it with a text editor (like Notepad or VS Code)</li>
+      <li>Replace the placeholder values with your actual credentials</li>
+      <li>Save the file</li>
+    </ol>
+    
+    <div class="warning">
+      <strong>Important:</strong> Make sure there are no spaces around the equals sign (=) in your .env file.
+    </div>
+  </div>
+  
+  <div class="step">
+    <h2><span class="step-number">3</span> Create Database Tables</h2>
+    <p>If you're using a brand new Supabase project, you need to create the required tables:</p>
+    
+    <ol>
+      <li>Open the <a href="https://app.supabase.com" target="_blank">Supabase Dashboard</a></li>
+      <li>Go to the <strong>SQL Editor</strong> tab</li>
+      <li>Create a new query</li>
+      <li>Copy and paste the content of each migration file:
+        <ul>
+          <li><code>20250822000000_create_bookings_table.sql</code></li>
+          <li><code>20250821000000_add_contacts_table.sql</code></li>
+        </ul>
+      </li>
+      <li>Run the queries to create the tables</li>
+    </ol>
+  </div>
+  
+  <div class="step">
+    <h2><span class="step-number">4</span> Restart Your App</h2>
+    <p>After updating your credentials, you need to restart the development server:</p>
+    
+    <div class="code-block">
+      # Stop any running instances first<br>
+      taskkill /f /im node.exe<br><br>
+      # Start the server<br>
+      npm run dev
+    </div>
+  </div>
+  
+  <div class="success">
+    <strong>Success!</strong> Once you've completed these steps, the Supabase Status checker should show "Connected" and your bookings will be properly saved to the database.
+  </div>
+</div>

@@ -1,0 +1,38 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Handle SPA routing for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# Add specific redirect rules for common subdomain paths
+[[redirects]]
+  from = "/sports-bikes/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/normal-bikes/*"
+  to = "/index.html"
+  status = 200
+  
+[[redirects]]
+  from = "/scooties/*"
+  to = "/index.html"
+  status = 200
+  
+[[redirects]]
+  from = "/contact/*"
+  to = "/index.html"
+  status = 200
+
+# Enable SPA handling for subdomains
+[[redirects]]
+  from = "https://*.netlify.app/*"
+  to = "/index.html"
+  status = 200
+  force = true
