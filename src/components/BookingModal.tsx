@@ -891,7 +891,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, bookingDat
                         w-full pl-10 pr-4 py-3 bg-gray-700 border rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-colors text-white placeholder-gray-400
                         ${errors.contact ? 'border-red-500' : 'border-gray-600'}
                       `}
-                      placeholder="+91 98765 43210"
+                      placeholder="9876543210"
                       disabled={isSubmitting}
                       aria-describedby={errors.contact ? 'contact-error' : undefined}
                     />
