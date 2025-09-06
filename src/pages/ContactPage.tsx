@@ -285,7 +285,14 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-white">Phone</h3>
-                    <p className="text-gray-400">+91 8827326825</p>
+                    <a 
+                      href="https://wa.me/918827326825?text=Hello,%20I%20would%20like%20to%20inquire%20about%20bike%20rentals." 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-yellow-400 hover:text-yellow-300 transition-colors cursor-pointer"
+                    >
+                      +91 8827326825
+                    </a>
                     <p className="text-xs text-gray-500 mt-1">All days, 9am-9pm</p>
                   </div>
                 </div>
@@ -296,7 +303,12 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-white">Email</h3>
-                    <p className="text-gray-400">riderental68@gmail.com</p>
+                    <a 
+                      href="mailto:riderental68@gmail.com" 
+                      className="text-yellow-400 hover:text-yellow-300 transition-colors cursor-pointer"
+                    >
+                      riderental68@gmail.com
+                    </a>
                     <p className="text-xs text-gray-500 mt-1">We'll respond within 24 hours</p>
                   </div>
                 </div>
@@ -307,7 +319,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-white">Location</h3>
-                    <p className="text-gray-400">VIT Bhopal, Kothri Kalan, Sehore</p>
+                    <p className="text-gray-400">VIT Bhopal, Kothri Kalan, Sehore, Madhya Pradesh</p>
                     <p className="text-xs text-gray-500 mt-1">Visit our rental office</p>
                   </div>
                 </div>
