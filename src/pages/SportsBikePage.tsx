@@ -29,7 +29,7 @@ const SportsBikePage = () => {
       id: 2,
       name: 'Bajaj Pulsar 150',
       image: pulsar150Img,
-      price: '₹500/day',
+      price: '₹550/day',
       specs: {
         engine: '150cc',
         power: '25 HP',
@@ -41,7 +41,7 @@ const SportsBikePage = () => {
       id: 3,
       name:'Bajaj Pulsar 125',
       image: pulsar125Img,
-      price: '₹500/day',
+      price: '₹550/day',
       specs: {
         engine: '125cc',
         power: '17.1 HP',

@@ -9,7 +9,7 @@ const HomePage = () => {
   const rentalOptions = [
     {
       title: 'Sports Bike',
-      price: '₹600',
+      price: '₹550',
       period: 'day',
       image: pulsar150Img,
       description: 'High-performance bikes for thrill seekers',
