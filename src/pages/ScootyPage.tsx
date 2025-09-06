@@ -13,7 +13,7 @@ const ScootyPage = () => {
       id: 1,
       name: 'Honda Activa 6G',
       image: activaImg,
-      price: '₹400/day',
+      price: '₹450/day',
       specs: {
         engine: '109cc',
         power: '7.79 HP',

@@ -17,7 +17,7 @@ const SportsBikePage = () => {
       id: 1,
       name: 'Royal Enfield Bullet',
       image: royalEnfieldImg,
-      price: '₹800/day',
+      price: '₹900/day',
       specs: {
         engine: '350cc',
         power: '18.6 HP',
@@ -53,7 +53,7 @@ const SportsBikePage = () => {
       id: 4,
       name: 'TVS Apache RTR 160',
       image: apacheImg,
-      price: '₹550/day',
+      price: '₹600/day',
       specs: {
         engine: '160cc',
         power: '24.5 HP',
@@ -65,7 +65,7 @@ const SportsBikePage = () => {
       id: 5,
       name: 'TVS Raider',
       image: tvsRaiderImg,
-      price: '₹550/day',
+      price: '₹600/day',
       specs: {
         engine: '125cc',
         power: '20 HP',
